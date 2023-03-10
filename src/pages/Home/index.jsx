@@ -15,6 +15,7 @@ function Home() {
       <h1>{forecast.location.name}</h1>
       <h3>{forecast.location.country}</h3>
       <h4>{formatDate(forecast.location.localtime_epoch)}</h4>
+      <br />
       <ul>
         <li>{forecast.current.temp_c}°C</li>
         <li>{forecast.current.condition.text}</li>
