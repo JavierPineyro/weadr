@@ -1,19 +1,40 @@
+@font-face {
+  font-family: 'NotoSans';
+  src: url('./assets/font/NotoSans-Regular.woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NotoSansBold';
+  src: url('./assets/font/NotoSans-Bold.woff2');
+  font-style: bold;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'NotoSansBlack';
+  src: url('./assets/font/NotoSans-Black.woff2');
+  font-style: bold;
+  font-weight: 900;
+}
+
 :root {
   --theme: light dark;
   --bg_main: #16161d;
   --font_color: #dedede;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "NotoSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.4;
   font-weight: 400;
 
   color-scheme: var(--theme);
   color: var(--font_color);
   background-color: var(--bg_main);
-  /* background-color: #242424; */
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+h1{
+  font-family: "NotoSans";
 }
