@@ -13,14 +13,16 @@
 @font-face {
   font-family: 'NotoSansBlack';
   src: url('./assets/font/NotoSans-Black.woff2');
-  font-style: bold;
+  font-style: bolder;
   font-weight: 900;
 }
 
 :root {
   --theme: light dark;
   --bg_main: #16161d;
-  --font_color: #dedede;
+  --font_color: #f0e2e2;
+  --gray_soft: #a7a7a7;
+  --gray_softer: #a7a7a77d;
   font-family: "NotoSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.4;
   font-weight: 400;

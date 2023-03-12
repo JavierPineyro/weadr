@@ -1,7 +1,9 @@
-import Home from '@/pages/Home'
-import Page404 from '@/pages/404'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import Header from '@/components/header'
+import { Route, Routes, useLocation } from 'react-router-dom'
+
+const LazyHomePage = lazy(() => import('./pages/Home/index'))
+const Lazy404 = lazy(() => import('./pages/404/index'))
 
 function App() {
   const location = useLocation()
@@ -9,11 +11,13 @@ function App() {
   return (
     <>
       <Header />
-      <Routes key={location.pathname} location={location}>
-        <Route path='/' element={<Home />} />
-        <Route path='/search:city' element={<h3>Aboot</h3>} />
-        <Route path='*' element={<Page404 />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes key={location.pathname} location={location}>
+          <Route path='/' element={<LazyHomePage />} />
+          <Route path='/search:city' element={<h3>Aboot</h3>} />
+          <Route path='*' element={<Lazy404 />} />
+        </Routes>
+      </Suspense>
       {/* //FOOTER */}
     </>
   )
