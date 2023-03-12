@@ -25,7 +25,8 @@
   "eslintConfig": {
     "rules": {
       "no-unused-vars": "off",
-      "space-before-function-paren": "off"
+      "space-before-function-paren": "off",
+      "no-lone-blocks":"off"
     },
     "extends": "standard"
   }
