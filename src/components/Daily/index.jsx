@@ -1,7 +1,7 @@
 import { HumidityIcon, WindIcon } from '@/components/Icons'
 import styles from './daily.module.css'
 
-function Daily({ forecast }) {
+function Daily({ forecast, chanceOfRain }) {
   const cards = [
     {
       classnames: {
@@ -47,9 +47,9 @@ function Daily({ forecast }) {
         cssLabel: styles.windLabel
       },
       icon: <WindIcon />,
-      value: forecast.current.wind_kph,
-      type: 'km/h',
-      label: 'Viento'
+      value: chanceOfRain,
+      type: '%',
+      label: 'Probabilidad de lluvias'
     }
   ]
 

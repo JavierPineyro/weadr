@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import Header from '@/components/header'
+import Footer from '@/components/Footer'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 const LazyHomePage = lazy(() => import('./pages/Home/index'))
@@ -14,11 +15,11 @@ function App() {
       <Suspense fallback={null}>
         <Routes key={location.pathname} location={location}>
           <Route path='/' element={<LazyHomePage />} />
-          <Route path='/search:city' element={<h3>Aboot</h3>} />
+          <Route path='/search/:city' element={<h3>Aboot</h3>} />
           <Route path='*' element={<Lazy404 />} />
         </Routes>
       </Suspense>
-      {/* //FOOTER */}
+      {/* <Footer /> */}
     </>
   )
 }
