@@ -1,0 +1,39 @@
+.content{
+  display: flex;
+  gap: 14px;
+  padding: 10px;
+  margin-top: 50px;
+  overflow-x: scroll;
+  border-radius: 10px;
+  border: 1px solid var(--gray_softer);
+}
+
+.hourItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--bg_main);
+  border: 1px solid var(--gray_softer);
+  padding: 8px 2px;
+  min-width: 150px;
+  height: 200px;
+}
+
+.hourTime{
+  font-family: 'NotoSansBold';
+  font-size: 14px;
+}
+
+
+.hourTemp{
+  font-family: 'NotoSansBlack';
+  font-size: 20px;
+}
+
+.hourText{
+  font-family: 'NotoSans';
+  font-size: 12px;
+  text-align: center;
+}
