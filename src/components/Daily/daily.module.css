@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   margin-top: 50px;
   height: 100%;
 }
@@ -21,7 +21,7 @@
 }
 
 .tempIcon img{
-  height: 35px;
+  height: 28px;
 }
 
 .humidityIcon, .windIcon,.tempIcon{
@@ -32,16 +32,18 @@
 .humidityLabel, .celsiusLabel, .windLabel{
   text-align: center;
   font-size: 14px;
+  color: var(--gray_soft);
 }
 
 .humidityValue, .celsiusValue, .windValue{
   font-family: 'NotoSansBold';
   font-size: 45px;
   text-align: center;
+  width: 100%;
 }
 
 .humidityValue span,.windValue span, .celsiusValue span{
   font-family: 'NotoSans';
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 3px;
 }

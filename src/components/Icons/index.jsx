@@ -79,20 +79,6 @@ export function WindIcon() {
   )
 }
 
-export function TempIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-temperature-plus" width="30" height="30" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M8 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 0 0 -4 0v8.5"></path>
-      <path d="M8 9l4 0"></path>
-      <path d="M16 9l6 0"></path>
-      <path d="M19 6l0 6"></path>
-    </svg>
-  )
-}
-
 export function SunriseIcon() {
   return (
     <svg
@@ -116,6 +102,16 @@ export function SunsetIcon() {
 
 export function HumidityIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M14.5 18q.625 0 1.062-.438Q16 17.125 16 16.5t-.438-1.062Q15.125 15 14.5 15t-1.062.438Q13 15.875 13 16.5t.438 1.062Q13.875 18 14.5 18Zm-5.75-.75q.3.3.7.3q.4 0 .7-.3l5.1-5.1q.3-.3.3-.7q0-.4-.3-.7q-.3-.3-.712-.3q-.413 0-.713.3L8.75 15.825q-.3.3-.3.713q0 .412.3.712ZM9.5 13q.625 0 1.062-.438Q11 12.125 11 11.5t-.438-1.062Q10.125 10 9.5 10t-1.062.438Q8 10.875 8 11.5t.438 1.062Q8.875 13 9.5 13Zm2.5 9q-3.175 0-5.587-2.212Q4 17.575 4 13.8q0-2.375 1.8-5.15q1.8-2.775 5.45-6q.15-.125.35-.2q.2-.075.4-.075t.4.075q.2.075.35.2q3.65 3.225 5.45 6Q20 11.425 20 13.8q0 3.775-2.413 5.988Q15.175 22 12 22Zm0-2q2.525 0 4.262-1.725Q18 16.55 18 13.8q0-1.775-1.475-4.063Q15.05 7.45 12 4.65q-3.05 2.8-4.525 5.087Q6 12.025 6 13.8q0 2.75 1.737 4.475Q9.475 20 12 20Zm0-6.2Z" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" fill="none" stroke="none" /><path fill="currentColor" d="M14.5 18q.625 0 1.062-.438Q16 17.125 16 16.5t-.438-1.062Q15.125 15 14.5 15t-1.062.438Q13 15.875 13 16.5t.438 1.062Q13.875 18 14.5 18Zm-5.75-.75q.3.3.7.3q.4 0 .7-.3l5.1-5.1q.3-.3.3-.7q0-.4-.3-.7q-.3-.3-.712-.3q-.413 0-.713.3L8.75 15.825q-.3.3-.3.713q0 .412.3.712ZM9.5 13q.625 0 1.062-.438Q11 12.125 11 11.5t-.438-1.062Q10.125 10 9.5 10t-1.062.438Q8 10.875 8 11.5t.438 1.062Q8.875 13 9.5 13Zm2.5 9q-3.175 0-5.587-2.212Q4 17.575 4 13.8q0-2.375 1.8-5.15q1.8-2.775 5.45-6q.15-.125.35-.2q.2-.075.4-.075t.4.075q.2.075.35.2q3.65 3.225 5.45 6Q20 11.425 20 13.8q0 3.775-2.413 5.988Q15.175 22 12 22Zm0-2q2.525 0 4.262-1.725Q18 16.55 18 13.8q0-1.775-1.475-4.063Q15.05 7.45 12 4.65q-3.05 2.8-4.525 5.087Q6 12.025 6 13.8q0 2.75 1.737 4.475Q9.475 20 12 20Zm0-6.2Z" /></svg>
+  )
+}
+
+export function Umbrella() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-umbrella" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 12a8 8 0 0 1 16 0z"></path>
+      <path d="M12 12v6a2 2 0 0 0 4 0"></path>
+    </svg>
   )
 }

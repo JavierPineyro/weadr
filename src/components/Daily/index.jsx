@@ -1,4 +1,4 @@
-import { HumidityIcon, WindIcon } from '@/components/Icons'
+import { HumidityIcon, WindIcon, Umbrella } from '@/components/Icons'
 import styles from './daily.module.css'
 
 function Daily({ forecast, chanceOfRain }) {
@@ -46,7 +46,7 @@ function Daily({ forecast, chanceOfRain }) {
         cssData: styles.windValue,
         cssLabel: styles.windLabel
       },
-      icon: <WindIcon />,
+      icon: <Umbrella />,
       value: chanceOfRain,
       type: '%',
       label: 'Probabilidad de lluvias'
@@ -63,8 +63,8 @@ function Daily({ forecast, chanceOfRain }) {
                 {item.icon}
               </div>
               <div>
-                <div className={item.classnames.cssData}>{item.value}<span>{item.type}</span></div>
-                <div className={item.classnames.cssLabel}>{item.label}</div>
+                <p className={item.classnames.cssData}>{item.value}<span>{item.type}</span></p>
+                <p className={item.classnames.cssLabel}>{item.label}</p>
               </div>
             </article>
           )

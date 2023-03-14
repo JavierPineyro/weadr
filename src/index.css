@@ -25,6 +25,10 @@
   --gray_softer: #a7a7a77d;
   --gradient_from: rgb(176, 245, 73) 25%;
   --gradient_to: rgb(170, 250, 31) 80%;
+  --sb-track-color: #232E33;
+  --sb-thumb-color: var(--gray_soft);
+  --sb-size: 10px;
+
   font-family: "NotoSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.4;
   font-weight: 400;
@@ -41,4 +45,26 @@
 }
 h1{
   font-family: "NotoSans";
+}
+
+
+body {
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+
+  background: linear-gradient(90deg, var(--bg_main) 21px, transparent 1%) center, linear-gradient(var(--bg_main) 21px, transparent 50%) center, #a7a7a79a;
+  background-size: 22px 22px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
 }

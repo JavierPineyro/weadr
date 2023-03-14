@@ -10,6 +10,7 @@
   font-family: 'NotoSansBlack';
   font-size: 24px;
   margin: 0;
+  cursor: pointer;
 
   background-image: linear-gradient(300deg, var(--gradient_from), var(--gradient_to));
   background-clip: text;
@@ -27,6 +28,7 @@
   border-radius: 9999px;
   transition: background-color .3s;
   user-select: none;
+  cursor: pointer;
 }
 
 .button:hover{
