@@ -44,7 +44,7 @@
   box-sizing: border-box;
 }
 h1{
-  font-family: "NotoSans";
+  font-family: "NotoSans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;;
 }
 
 

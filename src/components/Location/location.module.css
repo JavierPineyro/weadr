@@ -1,12 +1,12 @@
 .title{
   text-align: center;
-  font-family: 'NotoSansBlack';
+  font-family: 'NotoSansBlack', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 60px;
 }
 
 .country{
   text-align: center;
-  font-family: 'NotoSansBold';
+  font-family: 'NotoSansBold', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;

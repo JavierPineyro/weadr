@@ -36,14 +36,14 @@
 }
 
 .humidityValue, .celsiusValue, .windValue{
-  font-family: 'NotoSansBold';
+  font-family: 'NotoSansBold', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 45px;
   text-align: center;
   width: 100%;
 }
 
 .humidityValue span,.windValue span, .celsiusValue span{
-  font-family: 'NotoSans';
+  font-family: 'NotoSans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin-left: 3px;
 }
