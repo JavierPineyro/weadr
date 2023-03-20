@@ -1,0 +1,56 @@
+:root{
+  --initial_color_sk: hsla(201, 20%, 80%, 0.264);
+  --final_color_sk: hsla(200, 6%, 72%, 0.671);
+  --animation: skeleton-loading .4s linear infinite alternate;
+}
+
+.container{
+  min-height: 90vh;
+  padding: 0 30px;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+}
+
+.title, .subtitle, .time, .cardsTime{
+  margin-top: 15px;
+  border-radius: 10px;
+  animation: var(--animation);
+  background-color: rgba(180, 180, 180, 0.202);
+}
+
+.title{
+  width: 235px;
+  height: 40px;
+}
+
+.subtitle{
+  width: 180px;
+  height: 30px;
+}
+
+.time{
+  width: 210px;
+  height: 20px;
+}
+
+.cardsTime{
+  width: 100%;
+  height: 140px;
+  margin-top: 50px;
+
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--initial_color_sk)
+  }
+  100% {
+    background-color: var(--final_color_sk)
+  }
+}

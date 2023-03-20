@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/Footer'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import Skeleton from '@/components/Skeleton'
 
 const LazyHomePage = lazy(() => import('./pages/Home/index'))
 const Lazy404 = lazy(() => import('./pages/404/index'))
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Suspense fallback={null}>
+      <Suspense fallback={<Skeleton />}>
         <Routes key={location.pathname} location={location}>
           <Route path='/' element={<LazyHomePage />} />
           <Route path='/search/:city' element={<h3>Aboot</h3>} />
