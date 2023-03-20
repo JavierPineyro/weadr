@@ -24,7 +24,6 @@ function Home() {
       />
       <Daily forecast={dailyForecast} chanceOfRain={chanceOfRain} />
       <Hourly forecast={hourlyForecast} />
-      {/* aca viene la box con la puesta del sol y salida del sol etiqueta time */}
       <Astros astros={astros} />
       {/* aca se podria agregar lo mismo pero para los dos días siguientes resumidos
         en condicion, fecha, temperatura max y min

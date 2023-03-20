@@ -23,8 +23,12 @@
   --font_color: #f0e2e2;
   --gray_soft: #a7a7a7;
   --gray_softer: #a7a7a77d;
-  --gradient_from: rgb(176, 245, 73) 25%;
-  --gradient_to: rgb(170, 250, 31) 80%;
+  --dots: #a7a7a76d;
+  --button_hover:rgb(44, 46, 48);
+  /* --gradient_from: rgb(176, 245, 73) 25%;
+  --gradient_to: rgb(170, 250, 31) 80%; */
+  --gradient_from: #33f;
+  --gradient_to: #f33;
   --sb-track-color: #232E33;
   --sb-thumb-color: var(--gray_soft);
   --sb-size: 10px;
@@ -51,7 +55,7 @@ h1{
 body {
   scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 
-  background: linear-gradient(90deg, var(--bg_main) 21px, transparent 1%) center, linear-gradient(var(--bg_main) 21px, transparent 50%) center, #a7a7a79a;
+  background: linear-gradient(90deg, var(--bg_main) 21px, transparent 1%) center, linear-gradient(var(--bg_main) 21px, transparent 50%) center, var(--dots);
   background-size: 22px 22px;
 }
 

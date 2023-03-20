@@ -1,10 +1,16 @@
 import { useState, lazy, Suspense } from 'react'
-import { SearchIcon, SunIcon } from '../Icons'
+import { SearchIcon } from '@/components/Icons'
+import ThemeButton from '@/components/ThemeButton'
+import { useDarkStore } from '../../../theme'
 import styles from './header.module.css'
 const LazySearchPopUp = lazy(() => import('../PopUp/index'))
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
+
+  const darkMode = useDarkStore((state) => state.darkMode)
+  const toggleColorMode = useDarkStore((state) => state.toggleColorMode)
+
   const handleClick = () => setIsOpen(true)
   // UN INPUT Y QUE DESPUES DE 3 LETRAS HAGA UNA BUSQUEDA DE OPCIONES
   return (
@@ -15,7 +21,7 @@ function Header() {
           <button className={styles.button} onClick={handleClick}>
             <SearchIcon /> Search
           </button>
-          <button className={styles.button}><SunIcon /></button>
+          <ThemeButton toggleColorMode={toggleColorMode} darkMode={darkMode} />
         </div>
       </header>
       <Suspense fallback={null}>

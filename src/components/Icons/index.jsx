@@ -1,3 +1,5 @@
+import { useDarkStore } from '../../../theme'
+
 export function SearchIcon() {
   return (
 
@@ -77,9 +79,10 @@ export function Umbrella() {
 }
 
 export function SunsetIcon(props) {
+  const darkMode = useDarkStore((state) => state.darkMode)
   return (
     <svg
-      style={{ fill: '#fff' }}
+      style={{ fill: darkMode ? '#fff' : '#16161d' }}
       width={34}
       height={34}
       viewBox="0 0 24 24"
@@ -92,9 +95,10 @@ export function SunsetIcon(props) {
 }
 
 export function SunriseIcon(props) {
+  const darkMode = useDarkStore((state) => state.darkMode)
   return (
     <svg
-      style={{ fill: '#fff' }}
+      style={{ fill: darkMode ? '#fff' : '#16161d' }}
       width={34}
       height={34}
       viewBox="0 0 24 24"
@@ -107,9 +111,10 @@ export function SunriseIcon(props) {
 }
 
 export function MoonsetIcon(props) {
+  const darkMode = useDarkStore((state) => state.darkMode)
   return (
     <svg
-      style={{ fill: '#fff' }}
+      style={{ fill: darkMode ? '#fff' : '#16161d' }}
       width={34}
       height={34}
       viewBox="0 0 32 32"
@@ -129,9 +134,10 @@ export function MoonsetIcon(props) {
 }
 
 export function MoonriseIcon(props) {
+  const darkMode = useDarkStore((state) => state.darkMode)
   return (
     <svg
-      style={{ fill: '#fff' }}
+      style={{ fill: darkMode ? '#fff' : '#16161d' }}
       width={34}
       height={34}
       viewBox="0 0 32 32"

@@ -1,0 +1,16 @@
+.button{
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: background-color .3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: var(--button_hover);
+}
