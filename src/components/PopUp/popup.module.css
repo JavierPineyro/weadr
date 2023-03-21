@@ -1,0 +1,63 @@
+.input{
+  outline: none;
+  border: none;
+  padding:6px 10px;
+  flex: 1;
+  font-size: large;
+}
+
+.input:focus{
+  outline: 1px solid #ccc;
+}
+
+/* ACA VA EL POP UP EN SI */
+.dialog{
+  position: relative;
+  z-index: 50;
+}
+
+.backdrop{
+  position: fixed;
+  inset: 0;
+  background-color: #222;
+  opacity: 0.4;
+}
+
+.wrapper{
+  position: fixed;
+  inset: 10px 0 0 0;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 4px;
+}
+
+.panel{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #12121c;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn{
+  all: unset;
+  transition: all .2s ;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+}
+
+.btn:hover{
+  background-color: #222;
+}
