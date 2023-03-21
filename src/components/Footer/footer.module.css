@@ -5,3 +5,17 @@
   justify-content: center;
   background-color: var(--bg_main);
 }
+
+.footer a{
+  margin-left: 5px;
+  transition: all .2s;
+  color: var(--font_color);
+}
+
+.footer a:hover{
+  color: #f33;
+}
+
+.footer a:active{
+  color: #a33;
+}

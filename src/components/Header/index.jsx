@@ -5,7 +5,7 @@ import { useDarkStore } from '../../../theme'
 import styles from './header.module.css'
 const LazySearchPopUp = lazy(() => import('../PopUp/index'))
 
-function Header() {
+function Header({ viewNavigate }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const darkMode = useDarkStore((state) => state.darkMode)
@@ -25,7 +25,7 @@ function Header() {
         </div>
       </header>
       <Suspense fallback={null}>
-        <LazySearchPopUp isOpen={isOpen} onOpen={setIsOpen} />
+        <LazySearchPopUp viewNavigate={viewNavigate} isOpen={isOpen} onOpen={setIsOpen} />
       </Suspense>
     </>
   )
