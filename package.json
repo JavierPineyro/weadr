@@ -26,7 +26,8 @@
     "rules": {
       "no-unused-vars": "off",
       "space-before-function-paren": "off",
-      "no-lone-blocks":"off"
+      "no-lone-blocks":"off",
+      "prefer-const":"warn"
     },
     "extends": "standard"
   }
