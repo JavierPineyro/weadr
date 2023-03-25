@@ -1,9 +1,28 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { CloseIcon } from '../Icons'
+import { CloseIcon } from '@/components/Icons'
+import { searcher } from '@/utils'
 import styles from './popup.module.css'
+import SearchItem from '../SearchItem'
 
 function PopUp({ isOpen, onOpen, viewNavigate }) {
+  const [query, setQuery] = useState('')
+  const [results, setResults] = useState([])
+
+  let timerID
+
+  const handleChange = (evt) => {
+    clearTimeout(timerID)
+    const { value } = evt.target
+    setQuery(value)
+    timerID = setTimeout(searchCities, 400)
+  }
+
+  const searchCities = async () => {
+    const data = await searcher(query)
+    setResults(data)
+  }
+
   return (
     <Transition show={isOpen} as={Fragment}>
       <Dialog
@@ -41,6 +60,8 @@ function PopUp({ isOpen, onOpen, viewNavigate }) {
                 <input
                   className={styles.input}
                   type='search'
+                  onChange={handleChange}
+                  value={query}
                   placeholder='Santa Fe...' />
                 <button
                   title='cerrar'
@@ -49,6 +70,22 @@ function PopUp({ isOpen, onOpen, viewNavigate }) {
                   <CloseIcon />
                 </button>
               </Dialog.Description>
+              <section className={styles.section}>
+                {results?.length === 0 && 'No hay resultados'}
+                {
+                  Array.isArray(results) &&
+                  results?.map((item) => (
+                    <SearchItem
+                      key={item.id}
+                      city={item.name}
+                      region={item.region}
+                      country={item.country}
+                      coords={`${item.lat},${item.lon}`}
+                    />
+                  ))
+                }
+
+              </section>
             </Dialog.Panel>
           </Transition.Child>
         </div>

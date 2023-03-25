@@ -4,6 +4,7 @@
   padding:6px 10px;
   flex: 1;
   font-size: large;
+  border-radius: 10px;
 }
 
 .input:focus{
@@ -37,10 +38,11 @@
   border-radius: 10px;
   background-color: #12121c;
   width: 400px;
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 200px;
 }
 
 .description{
@@ -60,4 +62,10 @@
 
 .btn:hover{
   background-color: #222;
+}
+
+.section{
+  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 8px;
 }

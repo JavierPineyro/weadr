@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     function changeThemeToLightMode() {
-      window.document.documentElement.style.setProperty('--bg_main', '#fff')
+      window.document.documentElement.style.setProperty('--bg_main', '#e4e4e4')
       window.document.documentElement.style.setProperty('--font_color', '#16161d')
       window.document.documentElement.style.setProperty('--button_hover', 'rgb(198, 200, 202)')
       window.document.documentElement.style.setProperty('--gray_soft', '#222')
