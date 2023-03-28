@@ -1,7 +1,7 @@
 :root{
-  --initial_color_sk: hsla(201, 20%, 80%, 0.264);
-  --final_color_sk: hsla(200, 6%, 72%, 0.671);
-  --animation: skeleton-loading .4s linear infinite alternate;
+  --initial_color_sk: hsla(201, 20%, 80%, 0.158);
+  --final_color_sk: hsla(200, 6%, 72%, 0.386);
+  --animation: skeleton-loading .6s linear infinite alternate;
 }
 
 .container{
