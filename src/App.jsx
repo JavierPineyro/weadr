@@ -1,9 +1,9 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { useDarkStore } from '../theme'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Skeleton from '@/components/Skeleton'
-import { useDarkStore } from '../theme'
 
 const LazyHomePage = lazy(() => import('./pages/Home/index'))
 const Lazy404 = lazy(() => import('./pages/404/index'))
