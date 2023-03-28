@@ -12,6 +12,10 @@ export const API_OPTIONS = {
   }
 }
 
+console.log('variables de entorno')
+console.log(import.meta.env.VITE_API_HOST)
+console.log(import.meta.env.API_KEY)
+
 export const formatDate = (t) => {
   const rawDate = new Date(t * 1000) // con el epoc time transformo a date
   const options = { dateStyle: 'full' } // opciones para mostrar la fecha
