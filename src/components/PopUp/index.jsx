@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import SearchItem from '@/components/SearchItem'
 import { CloseIcon } from '@/components/Icons'
 import { searcher } from '@/utils'
 import styles from './popup.module.css'
-import SearchItem from '../SearchItem'
 
 function PopUp({ isOpen, onOpen, viewNavigate }) {
   const [query, setQuery] = useState('')
@@ -80,7 +80,6 @@ function PopUp({ isOpen, onOpen, viewNavigate }) {
                       city={item.name}
                       region={item.region}
                       country={item.country}
-                      coords={`${item.lat},${item.lon}`}
                     />
                   ))
                 }

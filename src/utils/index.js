@@ -18,6 +18,17 @@ export const formatDate = (t) => {
   return new Intl.DateTimeFormat('es-AR', options).format(rawDate) // creo la fecha
 }
 
+export const fetcher = async (url) => {
+  if (!url) return []
+  const res = await fetch(url, API_OPTIONS)
+
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the data.')
+    throw error
+  }
+  return res.json()
+}
+
 export const searcher = async (query) => {
   if (!query) return []
   const res = await fetch(`${SEARCH_URL}${query}`, API_OPTIONS)
