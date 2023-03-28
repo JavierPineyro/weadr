@@ -3,6 +3,7 @@ import { SearchIcon } from '@/components/Icons'
 import ThemeButton from '@/components/ThemeButton'
 import { useDarkStore } from '../../../theme'
 import styles from './header.module.css'
+import { Link } from 'react-router-dom'
 const LazySearchPopUp = lazy(() => import('../PopUp/index'))
 
 function Header({ viewNavigate }) {
@@ -16,7 +17,7 @@ function Header({ viewNavigate }) {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.logo}>Weadr.</div>
+        <Link to='/' className={styles.logo}>Weadr.</Link>
         <div className={styles.containerButton}>
           <button className={styles.button} onClick={handleClick}>
             <SearchIcon /> Search

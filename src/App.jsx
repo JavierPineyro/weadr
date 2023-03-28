@@ -7,6 +7,7 @@ import { useDarkStore } from '../theme'
 
 const LazyHomePage = lazy(() => import('./pages/Home/index'))
 const Lazy404 = lazy(() => import('./pages/404/index'))
+const LazySearchPage = lazy(() => import('./pages/Search/index'))
 
 function App() {
   const location = useLocation()
@@ -55,7 +56,7 @@ function App() {
       <Suspense fallback={<Skeleton />}>
         <Routes key={location.pathname} location={location}>
           <Route path='/' element={<LazyHomePage />} />
-          <Route path='/search/:city' element={<h3>Aboot</h3>} />
+          <Route path='/search/:city' element={<LazySearchPage />} />
           <Route path='*' element={<Lazy404 />} />
         </Routes>
       </Suspense>

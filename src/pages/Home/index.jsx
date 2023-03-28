@@ -12,7 +12,7 @@ import Skeleton from '@/components/Skeleton'
 import styles from './home.module.css'
 
 function Home() {
-  const [geolocation, setGeolocation] = useState('capiovi')
+  const [geolocation, setGeolocation] = useState('posadas')
   const { data, error } = useSWR(`${FORECAST_URL}${geolocation}&days=1&lang=es`, fetcher)
 
   useEffect(() => {
