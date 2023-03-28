@@ -8,7 +8,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Host': import.meta.env.VITE_API_HOST,
-    'X-RapidAPI-Key': import.meta.env.API_KEY
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY
   }
 }
 
