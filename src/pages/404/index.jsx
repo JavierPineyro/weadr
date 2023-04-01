@@ -1,13 +1,12 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import styles from './notfound.module.css'
 function NotFound() {
-  console.log('404 se veee')
   return (
-    <>
-      <h1>404</h1>
-      <Link to='/'>Volver al Inicio</Link>
-    </>
+    <main className={styles.main}>
+      <h1 className={styles.title}>404</h1>
+      <p className={styles.paragraph}>Algo salió mal D:</p>
+      <Link className={styles.link} to='/'>← ir al Inicio</Link>
+    </main>
   )
 }
 
