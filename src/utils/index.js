@@ -1,3 +1,4 @@
+// API Config
 export const FORECAST_URL =
   'https://weatherapi-com.p.rapidapi.com/forecast.json?q='
 
@@ -12,15 +13,27 @@ export const API_OPTIONS = {
   }
 }
 
-console.log('variables de entorno')
-console.log(import.meta.env.VITE_API_HOST)
-console.log(import.meta.env.API_KEY)
-
+// Date formater
 export const formatDate = (t) => {
   const rawDate = new Date(t * 1000) // con el epoc time transformo a date
   const options = { dateStyle: 'full' } // opciones para mostrar la fecha
   return new Intl.DateTimeFormat('es-AR', options).format(rawDate) // creo la fecha
 }
+
+// export const formatDate = (t) => {
+//   const rawDate = new Date(t * 1000) // con el epoc time transformo a date
+//   const options = {
+//     year: 'numeric',
+//     month: 'long',
+//     day: 'numeric',
+//     hour: 'numeric',
+//     minute: 'numeric',
+//     hour12: false
+//   }
+//   return new Intl.DateTimeFormat('default', options).format(rawDate) // creo la fecha
+// }
+
+// Fetchers
 
 export const fetcher = async (url) => {
   if (!url) return []
