@@ -25,31 +25,38 @@ function App() {
   }
 
   useEffect(() => {
-    function changeThemeToLightMode() {
-      window.document.documentElement.style.setProperty('--bg_main', '#e4e4e4')
-      window.document.documentElement.style.setProperty('--font_color', '#16161d')
-      window.document.documentElement.style.setProperty('--button_hover', 'rgb(198, 200, 202)')
-      window.document.documentElement.style.setProperty('--gray_soft', '#222')
-      window.document.documentElement.style.setProperty('--gray_softer', '#16161d')
-      window.document.documentElement.style.setProperty('--dots', '#212112c1')
-    }
-    function changeThemeToDarkMode() {
-      window.document.documentElement.style.setProperty('--bg_main', '#16161d')
-      window.document.documentElement.style.setProperty('--font_color', '#f0e2e2')
-      window.document.documentElement.style.setProperty('--button_hover', 'rgb(44, 46, 48)')
-      window.document.documentElement.style.setProperty('--gray_soft', '#a7a7a7')
-      window.document.documentElement.style.setProperty('--gray_softer', '#a7a7a77d')
-      window.document.documentElement.style.setProperty('--dots', '#a7a7a76d')
+    function changeTheme({ darkMode }) {
+      const THEME = darkMode ? 'dark' : 'light'
+
+      const MODE = {
+        light: {
+          '--bg_main': '#e4e4e4',
+          '--font_color': '#16161d',
+          '--button_hover': 'rgb(198, 200, 202)',
+          '--gray_soft': '#222',
+          '--gray_softer': '#16161d',
+          '--dots': '#212112c1'
+        },
+        dark: {
+          '--bg_main': '#16161d',
+          '--font_color': '#f0e2e2',
+          '--button_hover': 'rgb(44, 46, 48)',
+          '--gray_soft': '#a7a7a7',
+          '--gray_softer': '#a7a7a77d',
+          '--dots': '#a7a7a76d'
+        }
+      }
+
+      const themeMode = MODE[THEME]
+
+      Object.entries(themeMode).forEach(([key, value]) => {
+        window.document.documentElement.style.setProperty(key, value)
+      })
     }
 
-    if (!darkMode) {
-      changeThemeToLightMode()
-    } else {
-      changeThemeToDarkMode()
-    }
+    changeTheme({ darkMode })
   }, [darkMode])
 
-  // INSTALAR SWR
   return (
     <>
       <Header viewNavigate={viewNavigate} />
