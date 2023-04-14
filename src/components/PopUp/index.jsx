@@ -2,26 +2,13 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import SearchItem from '@/components/SearchItem'
 import { CloseIcon } from '@/components/Icons'
-import { searcher } from '@/utils'
+import { useSearchResults } from '@/hooks/useSearchResults'
+
 import styles from './popup.module.css'
 
 function PopUp({ isOpen, onOpen, viewNavigate }) {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState([])
-
-  let timerID
-
-  const handleChange = (evt) => {
-    clearTimeout(timerID)
-    const { value } = evt.target
-    setQuery(value)
-    timerID = setTimeout(searchCities, 400)
-  }
-
-  const searchCities = async () => {
-    const data = await searcher(query)
-    setResults(data)
-  }
+  const { results } = useSearchResults({ query })
 
   return (
     <Transition show={isOpen} as={Fragment}>
@@ -60,7 +47,7 @@ function PopUp({ isOpen, onOpen, viewNavigate }) {
                 <input
                   className={styles.input}
                   type='search'
-                  onChange={handleChange}
+                  onChange={(e) => setQuery(e.target.value)}
                   value={query}
                   placeholder='Santa Fe...' />
                 <button
