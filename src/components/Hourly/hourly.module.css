@@ -29,5 +29,6 @@
   font-family: 'NotoSans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--gray_soft);
   font-size: 10px;
+  font-weight: bold;
   text-align: center;
 }

@@ -35,7 +35,8 @@ function App() {
           '--button_hover': 'rgb(198, 200, 202)',
           '--gray_soft': '#222',
           '--gray_softer': '#16161d',
-          '--dots': '#212112c1'
+          '--dots': '#7c7c69c1'
+          // '--dots': '#212112c1'
         },
         dark: {
           '--bg_main': '#16161d',

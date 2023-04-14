@@ -22,7 +22,7 @@
 }
 
 .footer{
-  color: var(--gray_soft);
+  color: #a7a7a7;
   font-size: 14px;
   display: flex;
   align-content: center;
